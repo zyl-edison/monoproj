@@ -1,0 +1,8 @@
+bazel-bin
+bazel-genfiles
+bazel-monoproj
+bazel-out
+bazel-testlogs
+dist
+node_modules
+*.tgz
