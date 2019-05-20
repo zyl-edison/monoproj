@@ -1,5 +1,5 @@
 {
-  "name": "@monoproj/core",
+  "name": "@monoproj/shared",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Edison Li",
-  "license": "MIT",
-  "dependencies": {
-    "@monoproj/shared": "file:../../monoproj-shared-1.0.0.tgz"
-  }
+  "author": "Edison",
+  "license": "MIT"
 }

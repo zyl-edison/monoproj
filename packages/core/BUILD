@@ -6,6 +6,13 @@ ts_library(
     name = "core",
     srcs = glob(["*.ts"]),
     module_name = "@monoproj/core",
+    deps = [
+        "@npm//@monoproj/shared",
+        "//packages/core/src/classes",
+        "//packages/core/src/decorators",
+        "//packages/core/src/helpers",
+        "//packages/core/src/interfaces",
+    ]
 )
 
 npm_package(
