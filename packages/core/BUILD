@@ -12,5 +12,13 @@ npm_package(
     name = "package",
     srcs = ["package.json"],
     replacements = {"//internal/": "//"},
+    deps = [":bundle"],
+)
+
+load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
+
+rollup_bundle(
+    name = "bundle",
+    entry_point = "packages/core/index.js",
     deps = [":core"],
 )
