@@ -1,11 +1,20 @@
 package(default_visibility = ["//visibility:public"])
 
-load("//tools:defaults.bzl", "npm_package", "ts_library")
+load("//tools:defaults.bzl", "npm_package", "ts_library", "nodejs_binary")
+load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
+
 
 ts_library(
     name = "core",
     srcs = glob(["*.ts"]),
     module_name = "@monoproj/core",
+    deps = ["//packages/shared"]
+)
+
+nodejs_binary(
+    name = "app",
+    data = [":core"],
+    entry_point = "packages/core/index.js"
 )
 
 npm_package(
@@ -14,8 +23,6 @@ npm_package(
     replacements = {"//internal/": "//"},
     deps = [":bundle"],
 )
-
-load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
 
 rollup_bundle(
     name = "bundle",

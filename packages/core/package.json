@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Edison Li",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@monoproj/shared": "file:../../monoproj-shared-1.0.0.tgz"
+  }
 }
