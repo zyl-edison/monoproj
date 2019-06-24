@@ -1,5 +1,5 @@
-import { Runnable as RunnableIntf } from '@monoproj/shared/interfaces/Runnable';
+// import { Runnable as RunnableIntf } from '@monoproj/shared/interfaces/Runnable';
 
-export class Foo implements RunnableIntf {
-  run(): void {}
-}
+// export class Foo implements RunnableIntf {
+//   run(): void {}
+// }
