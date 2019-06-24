@@ -1,8 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 load("//tools:defaults.bzl", "npm_package", "ts_library", "nodejs_binary")
-load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
-
+load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle", "jasmine_node_test")
 
 ts_library(
     name = "core",
@@ -29,3 +28,13 @@ rollup_bundle(
     entry_point = "packages/core/index.js",
     deps = [":core"],
 )
+
+jasmine_node_test(
+    name = "unit_test",
+    srcs = [":spec"],
+    deps = [
+        "@npm//jasmine"
+    ],
+)
+
+
