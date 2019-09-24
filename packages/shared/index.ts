@@ -1,1 +1,2 @@
-export const foo = 'foo'
+export const foo = 'hello world'
+console.log(foo)

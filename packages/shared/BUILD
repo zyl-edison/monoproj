@@ -4,7 +4,7 @@ load("//tools:defaults.bzl", "npm_package", "ts_library", "nodejs_binary")
 
 ts_library(
     name = "shared",
-    srcs = glob(["*.ts"]),
+    srcs = glob(["**/*.ts"]),
     module_name = "@monoproj/shared",
     deps = ["//packages/shared/interfaces"]
 )

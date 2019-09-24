@@ -6,9 +6,9 @@ load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
 
 ts_library(
     name = "core",
-    srcs = glob(["*.ts"]),
+    srcs = glob(["**/*.ts"]),
     module_name = "@monoproj/core",
-    deps = ["//packages/shared"]
+    deps = ["@npm//@monoproj/shared"]
 )
 
 nodejs_binary(
